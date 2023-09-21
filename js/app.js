@@ -34,7 +34,7 @@ function displayEmployees(employeeData) {
         <div class="card" data-index="${index}">
         <img class="avatar" src="${picture.large}" />
         <div class="text-container">
-        <h2 class="name">${name.first} ${name.last}</h2>
+        <h2 class="name listing">${name.first} ${name.last}</h2>
         <p class="email">${email}</p>
         <p class="address">${city}</p>
         </div>
@@ -107,12 +107,12 @@ window.onclick = function(e) {
 // Adds a way to filter the directory by name. 
 searchBar.addEventListener('keyup', e => {
     let searchResult = e.target.value.toLowerCase();
-    let profileName = document.querySelectorAll('.name');
+    let profileName = document.querySelectorAll('.listing');
     
     profileName.forEach(profile => {
         if (profile.textContent.toLowerCase().includes(searchResult)) {
-            profile.parentNode.parentNode.style.display = 'flex';
-        } else {
+            profile.parentNode.parentNode.style.display = '';
+        }  else {
             profile.parentNode.parentNode.style.display = 'none';
         }
     });
