@@ -111,7 +111,7 @@ searchBar.addEventListener('keyup', e => {
     
     profileName.forEach(profile => {
         if (profile.textContent.toLowerCase().includes(searchResult)) {
-            profile.parentNode.parentNode.style.display = 'block';
+            profile.parentNode.parentNode.style.display = 'flex';
         } else {
             profile.parentNode.parentNode.style.display = 'none';
         }

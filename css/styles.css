@@ -38,6 +38,7 @@ body {
     border: 1px #DFDFDF solid;
     border-radius: 5px;
     padding: 8px;
+    max-width: 400px;
 }
 
 .card:hover {
